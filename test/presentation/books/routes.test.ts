@@ -10,13 +10,10 @@ describe('book route testing', () => {
     await testServer.start();
   });
 
-  // afterAll( () => {
-  //   testServer.close();
-  // } );
-
-  // beforeEach( async () => {
-  //   await prisma.book.deleteMany();
-  // } );
+  beforeEach( async () => {
+    await prisma.book.deleteMany();
+    await prisma.requestLog.deleteMany();
+  } );
 
   const book1 = { title: 'Hola Mundo 1', author: 'author 1', description: 'description 1' };
   const book2 = { title: 'Hola Mundo 2', author: 'author 2', description: 'description 2' };

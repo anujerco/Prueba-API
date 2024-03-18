@@ -4,6 +4,7 @@ import { EditBookDto, CreateBookDto } from "../dtos";
 
 export abstract class BookRepository {
 
+  //* Metodos
   abstract create(createBookDto: CreateBookDto): Promise<BookEntity>;
 
   abstract getAll(): Promise<BookEntity[]>;
